@@ -47,9 +47,9 @@ function TotalCost() {
     }
 
 
-    let grandTotal = totalCost + extraPerDay;
+    let grandTotal = totalCost + (extraPerDay * numOfDays);
 
     //display output.
-    let message = (`Car rental for ${numOfDays} days cost: $${totalCost}`);
+    let message = (`Car rental for ${numOfDays} days cost: $${grandTotal.toFixed(2)}`);
     document.getElementById('output').innerText = message;
 }
