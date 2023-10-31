@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shipping Info</title>
+
+</head>
+
+<body>
+    <h2>Shipping Information</h2>
+    <label for="hideShippingCheckbox">
+        <input type="checkbox" id="hideShippingCheckbox" onchange="toggleShippingInfo()"> Hide Shipping Info
+    </label>
+
+    <div id="shippingInfo">
+        <p>Shipping Address:</p>
+        <p>123 Main Street</p>
+        <p>City: Anytown</p>
+        <p>Country: USA</p>
+    </div>
+</body>
+
+<script>
+    function toggleShippingInfo() {
+         // output field with info that is hidden or shown inside.
+        var shippingInfo = document.getElementById("shippingInfo");  
+        //checkbox.
+        var hideShippingCheckbox = document.getElementById("hideShippingCheckbox"); 
+
+        if (hideShippingCheckbox.checked) {
+            shippingInfo.style.display = "none";
+        } else {
+            shippingInfo.style.display = "block";
+        }
+    }
+</script>
+
+</html>
